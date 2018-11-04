@@ -180,7 +180,8 @@ Public Class MainForm
                 SelectedGamesave.SaveToRegistry(slot)
             End If
         End If
-        UpdateSlotText()
+        AnimaRegistryEditor.Gamesaves.LoadSlot(slot)
+        SelectGamesave(slot)
     End Sub
 
     Private Sub BackupButton_Click(sender As Object, e As EventArgs) Handles BackupButton.Click
