@@ -1,0 +1,78 @@
+
+// LocationFullKey = LocationArea;LocationPlace;LocationInfo
+
+// Tutorial
+ciudad inicial prueba;Entrada1=Town of Iria;;Init
+ciudad inicial prueba;Entrada2=Town of Iria;;Center
+ciudad inicial prueba;Check Zone1=Town of Iria;;Exit
+Bosque Inicial Noche;Entrada1=Forsaken Road;;At Town Door
+Bosque Inicial Noche;Zona1=Forsaken Road;;At Mountain Pass
+Montanas;Entrada1=Mountain Pass;;At Forsaken Road
+Montanas;Entrada2=Mountain Pass;;At Old Ruins
+Montanas;Cube=Mountain Pass;;Center
+Exterior Arcane;Entrada1=Old Ruins;;At Mountain Pass
+Exterior Arcane;ZoneCheck0=Old Ruins;;Bridge #1
+Exterior Arcane;ZoneCheck1=Old Ruins;;Bridge #2
+Exterior Arcane;ZoneCheck2=Old Ruins;;Bridge #3
+
+// Arcane Tower
+arcane;INICIO=Arcane;Core;At Center
+arcane;Entrada1=Arcane;Core;At First Wing Door
+arcane;Entrada2=Arcane;Core;At Third Wing Door
+arcane;Entrada3=Arcane;Core;At Second Wing Door
+arcane;Entrada4=Arcane;Core;At Portal Chamber Door
+arcane;Entrada6=Arcane;Core;At Laberyntos Door
+arcane;EntradaRomeo=Arcane;Core;At Romeo Door
+romeo stage;EntradaRomeo=Boundary of Worlds;;Inside Romeo Room
+arcane torre;Entrada1=Arcane;Laberyntos;Inside Shop Room
+hall arcane especial;Entrada1=Arcane;Portal Chamber;At Core Door
+Hall arcane especial;EntradaMansion=Arcane;Portal Chamber;At Mansion Door
+Hall arcane especial;EntradaFolklore=Arcane;Portal Chamber;At Great Plains Door
+
+// Arcane Wings
+hall arcane;Entrada1=Arcane;First Wing;At Core Door
+hall arcane;Entrada2=Arcane;First Wing;At Mansion Door
+hall arcane 2B;Entrada1=Arcane;Second Wing;At Core Door
+hall arcane 2B;Check3Zone=Arcane;Second Wing;Checkpoint
+hall arcane 2B;Entrada2=Arcane;Second Wing;At Cathedral Door
+hall arcane 3C;Entrada1=Arcane;Third Wing;At Core Door
+hall arcane 3C;Entrada2=Arcane;Third Wing;At Folklore Door
+hall arcane 3C;Entrada3=Arcane;Third Wing;At Tomb Door
+hall arcane EX3;Entrada1=Arcane;Lost Tomb;At Wing Door
+
+// Mansion of Puppets
+Mansion 1;Entrada1=Mansion of Puppets;Main Body;At First Wing Door
+mansion 1;Entrada2=Mansion of Puppets;Main Body;At Basement Door
+mansion 1;Entrada3=Mansion of Puppets;Main Body;At Paintings Corridor Door
+Mansion 1;Entrada4=Mansion of Puppets;Main Body;At Nascal Core Door
+mansion 1;Entrada5=Mansion of Puppets;Main Body;At Attic Door
+mansion 1;CHECK PRECOMBATE=Mansion of Puppets;Main Body;Checkpoint
+Mansion 2;Entrada1=Mansion of Puppets;Attic;At Main Body Door
+Mansion 2;Check1=Mansion of Puppets;Attic;Memory Place
+mansion ex;Entrada1=Mansion of Puppets;Paintings Corridor;At Body Door
+mansion EX;Entrada2=Mansion of Puppets;Paintings Corridor;At Workshop Door
+Mansion 3;Entrada1=Mansion of Puppets;Workshop;At Corridor Door
+Mansion 3;Entrada2=Mansion of Puppets;Workshop;At Basement Door
+mansion 3;Entrada3=Mansion of Puppets;Workshop;At Portal Chamber Door
+mansion 4;Entrada1=Mansion of Puppets;Basement;At Workshop Door
+Mansion 4;Entrada2=Mansion of Puppets;Basement;At Main Body Door
+mansion 4;Check1=Mansion of Puppets;Basement;Right
+mansion 4;Check2=Mansion of Puppets;Basement;Bottom
+
+// Folklore
+Folklore;Check1=Folklore;Lia's Road;To Arcane Wing
+Folklore;Check2=Folklore;Lia's Road;To Zodiac Temple
+Folklore2Pradera;Check1=Folklore;Great Plains;To Lia's Road
+Folklore2Pradera;Check2=Folklore;Great Plains;To Mountain Heart
+Folklore2Pradera;Check3=Folklore;Great Plains;To Hidden Meadow
+Folklore2Pradera;Check4=Folklore;Great Plains;To Zodiac Temple
+Folklore2Pradera;Check5=Folklore;Great Plains;To Portal Chamber
+Folklore3TemploV2;Check1=Folklore;Heart of the Mountain;To Great Plains
+Folklore4Ruinas;Entrada1=Folklore;Zodiac Temple;To Lia's Road
+Folklore4Ruinas;Entrada2=Folklore;Zodiac Temple;To Great Plains
+Folklore5SalaFinal;Entrada1=Folklore;Hidden Meadow;To Great Plains
+Folklore5SalaFinal;Entrada2=Folklore;Hidden Meadow;To Messenger Core
+
+// Nowhere
+PREBOSSFolklore;Entrada1=Nowhere;Jonathan Kappel Core;Folklore
+PREBOSS2;Entrada1=Nowhere;Nascal Core;Mansion of Puppets

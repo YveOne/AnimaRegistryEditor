@@ -1,0 +1,46 @@
+
+Weapon=Weapon
+Armor=Armor
+useable=Useable
+Key=Key
+
+Easy=Easy
+Normal=Normal
+Godlike=Godlike
+
+Skill Tree=Skill Tree
+Skill Points=Skill Points
+Used=Used
+Clear=Clear
+
+Inventory=Inventory
+ID=ID
+Name=Name
+Type=Type
+Count=Count
+Special=Special
+Item Name=Item Name
+Item Description=Item Description
+Item Effects=Item Effects
+
+General=General
+Date String=Date String
+Current Place=Current Place
+Level=Level
+Experience=Experience
+Coins=Coins
+Dificulty=Dificulty
+Play Time=Play Time
+
+Save as=Save as
+Save=Save
+Delete=Delete
+Menu=Menu
+Data=Data
+Backup Registry=Backup Registry
+Reload Registry=Reload Registry
+Save Key Aliases=Save Key Aliases
+Help=Help
+About=About
+Reload=Reload
+Select Gamesave=Select Gamesave

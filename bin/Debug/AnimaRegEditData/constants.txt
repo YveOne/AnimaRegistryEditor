@@ -1,0 +1,21 @@
+﻿RegistryPath=HKEY_CURRENT_USER\Software\Anima Project Studio\GateofMemories
+
+SlotDateFormatPattern=HH:mm  dd'/'MM'/'yyyy
+SlotTextFormatPattern=Slot{0} - Lv{1}  {2}  {3}
+EmptySlotFormatPattern=- Empty -
+GamesaveChangedIndicator=*
+
+// changing following values may result in unwanted effects
+
+SavegameSlots=5
+MaxLevel=20
+LevelExpIncreaseStep=250
+LevelExpIncreaseStart=1000
+InventorySize=108
+SkillTreeSize=88
+SkillTreeMaxPointsBearer=50
+SkillTreeMaxPointsErgo=48
+// i am not very sure about following values
+MaxXP=36538000
+MaxCoins=36538000
+MaxPlayTime=36538000
