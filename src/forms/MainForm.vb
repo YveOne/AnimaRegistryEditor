@@ -7,7 +7,7 @@ Public Class MainForm
     Private SelectedGamesave As AnimaRegistryEditor.Gamesaves.Gamesave = Nothing
     Private IgnoreControlChange As Boolean = False
     Private MyFileVersion As String = FileVersionInfo.GetVersionInfo(Application.ExecutablePath).FileVersion
-    Private DataFolder As String = "AnimaRegEditData"
+    Private DataFolder As String = "Anima Registry Editor Data"
 
 #Region "Form Events"
 
@@ -39,13 +39,9 @@ Public Class MainForm
     Private Sub Initialize()
 
         If (Not IO.Directory.Exists(DataFolder)) Then
-            Dim shObj As Object = Activator.CreateInstance(Type.GetTypeFromProgID("Shell.Application"))
-            IO.Directory.CreateDirectory(DataFolder)
-            Using zip1 As Ionic.Zip.ZipFile = Ionic.Zip.ZipFile.Read(New IO.MemoryStream(My.Resources.data))
-                For Each e As Ionic.Zip.ZipEntry In zip1
-                    e.Extract(DataFolder, Ionic.Zip.ExtractExistingFileAction.OverwriteSilently)
-                Next
-            End Using
+            MessageBox.Show("Data folder missing!")
+            UIThreadInvoke(Me, Sub() Me.Close())
+            Return
         End If
 
         AnimaRegistryEditor.Initialize(DataFolder)
@@ -153,6 +149,9 @@ Public Class MainForm
 
     Private Sub UpdateSlotText(slot As Integer)
         Dim SlotText = AnimaRegistryEditor.Gamesaves.GetSlotText(slot)
+        'If (SlotText.Length > 30) Then
+        'SlotText = SlotText.Substring(0, 30) & "..."
+        'End If
         GetGamesaveButton(slot).Text = SlotText
         GetSaveAsButton(slot).Text = SlotText
         If (AnimaRegistryEditor.Gamesaves.IsSlotSelected(slot)) Then
@@ -259,11 +258,20 @@ Public Class MainForm
         Next
 
         Dim LocationsDataSource As New ArrayList()
-        For Each locPlace As AnimaRegistryEditor.Locations.LocationPlace In AnimaRegistryEditor.Locations.Places
+        Dim LocationPlace As AnimaRegistryEditor.Locations.LocationPlace
+        Dim LocationGroups As New SortedList(Of String, Integer)
+        Dim locationTitle As String
+        For i As Integer = 0 To AnimaRegistryEditor.Locations.Places.Count - 1
+            LocationPlace = AnimaRegistryEditor.Locations.Places(i)
+            locationTitle = LocationPlace.Title
+            If (Not LocationGroups.ContainsKey(locationTitle)) Then
+                LocationGroups.Add(locationTitle, LocationGroups.Values.Count)
+            End If
+            locationTitle = CStr(LocationGroups(locationTitle)).PadLeft(3, CChar("0")) & ") " & locationTitle
             LocationsDataSource.Add(New With {
-                .Value = locPlace.Key,
-                .Display = locPlace.Text,
-                .Group = locPlace.Title
+                .Value = LocationPlace.Key,
+                .Display = CStr(i).PadLeft(3, CChar("0")) & ") " & LocationPlace.Text,
+                .Group = locationTitle
              })
         Next
         CurrentPlaceDropDown.ValueMember = "Value"
