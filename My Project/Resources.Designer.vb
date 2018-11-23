@@ -61,38 +61,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Sucht eine lokalisierte Zeichenfolge, die                                                                  
-        '''                                                                                                                                  
-        '''                                                                                                                                                                                                   
-        '''                                                                                                                     [Rest der Zeichenfolge wurde abgeschnitten]&quot;; ähnelt.
-        '''</summary>
-        Friend ReadOnly Property _1337() As String
-            Get
-                Return ResourceManager.GetString("_1337", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property data() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("data", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property DotNetZip() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("DotNetZip", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Sucht eine lokalisierte Ressource vom Typ System.Byte[].
         '''</summary>
         Friend ReadOnly Property DropDownControls() As Byte()
