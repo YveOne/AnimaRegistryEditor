@@ -9,6 +9,7 @@
     Private Shared LevelExpIncreaseStep As Integer = 250
     Private Shared LevelExpIncreaseStart As Integer = 1000
     Public Shared SavegameSlots As Integer = 5
+    Public Shared SavegameMaxLength As Integer = 20
     'Private Shared skillSlots As Integer = 23
     'Private Shared gearSlots As Integer = 8
 

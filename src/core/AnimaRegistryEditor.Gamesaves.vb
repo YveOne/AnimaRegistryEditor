@@ -689,6 +689,9 @@ Partial Class AnimaRegistryEditor
             If GS IsNot Nothing Then
                 Dim charLoc As Locations.LocationPlace = Locations.GetPlace(GS.CurrentPlace)
                 Dim charPlace As String = Join({charLoc.Title, charLoc.Subtitle}, " ").Trim()
+                If charPlace.Length > SavegameMaxLength Then
+                    charPlace = charLoc.Subtitle
+                End If
                 Return String.Format(SlotTextFormatPattern, slot, GS.Level, charPlace, GS.DateString) & If(GS.ValuesChanged, GamesaveChangedIndicator, "")
             Else
                 Return String.Format(EmptySlotFormatPattern, slot)

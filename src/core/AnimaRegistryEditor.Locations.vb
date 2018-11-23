@@ -25,7 +25,7 @@
             End Property
             Public ReadOnly Property Text As String
                 Get
-                    Return If(Subtitle.Length > 0, Subtitle, Title) & " (" & Info & ")"
+                    Return If(Subtitle.Length > 0, Subtitle, Title) & If(Info.Length > 0, " (" & Info & ")", "")
                 End Get
             End Property
         End Class

@@ -67,6 +67,8 @@ Partial Class AnimaRegistryEditor
                         Case "LevelExpIncreaseStep" : LevelExpIncreaseStep = CInt(lineSplit(1))
                         Case "LevelExpIncreaseStart" : LevelExpIncreaseStart = CInt(lineSplit(1))
                         Case "SavegameSlots" : SavegameSlots = CInt(lineSplit(1))
+                        Case "SavegameMaxLength" : SavegameMaxLength = CInt(lineSplit(1))
+
                     End Select
                 End If
             Next
@@ -186,13 +188,23 @@ Partial Class AnimaRegistryEditor
         Private Shared Sub LoadLocationPlacesFile(fPath As String)
             Dim lineSplit As String()
             Dim rightSplit As String()
+            Dim locationFullKey As String
+            Dim locationAreaName As String
+            Dim locationPlaceName As String
+            Dim locationDescription As String
             For Each line As String In ReadFileLines(fPath)
                 lineSplit = line.Split(CChar("="))
-                lineSplit(0) = lineSplit(0).ToLower()
                 If (lineSplit.Length = 2) Then
+                    locationFullKey = lineSplit(0).ToLower().Trim()
                     rightSplit = lineSplit(1).Split(CChar(";"))
-                    If (rightSplit.Length = 3) Then
-                        Locations.AddPlace(lineSplit(0), rightSplit(0), rightSplit(1), rightSplit(2))
+                    If (rightSplit.Length >= 2) Then
+                        locationAreaName = rightSplit(0).Trim()
+                        locationPlaceName = rightSplit(1).Trim()
+                        locationDescription = ""
+                        If (rightSplit.Length >= 3) Then
+                            locationDescription = rightSplit(2)
+                        End If
+                        Locations.AddPlace(locationFullKey, locationAreaName, locationPlaceName, locationDescription)
                     End If
                 End If
             Next
