@@ -13,8 +13,6 @@
                 Return System.Reflection.Assembly.Load(My.Resources.DropDownControls)
             ElseIf args.Name.Contains("ObjectListView") Then
                 Return System.Reflection.Assembly.Load(My.Resources.ObjectListView)
-            ElseIf args.Name.Contains("DotNetZip") Then
-                Return System.Reflection.Assembly.Load(My.Resources.DotNetZip)
             Else
                 Return Nothing
             End If
