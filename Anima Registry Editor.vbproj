@@ -122,12 +122,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\ApplicationEvents.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="src\ApplicationEvents.vb" />
     <Compile Include="src\core\AnimaRegistryEditor.Misc.vb" />
     <Compile Include="src\core\AnimaRegistryEditor.Skills.vb" />
     <Compile Include="src\core\AnimaRegistryEditor.Inventory.vb" />
@@ -184,14 +184,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\data.zip" />
-    <None Include="bin\Debug\DropDownControls.xml" />
-    <None Include="bin\Debug\DropDownControls.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\DotNetZip.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
@@ -199,7 +191,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1337.txt" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
