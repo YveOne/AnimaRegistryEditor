@@ -1,0 +1,153 @@
+
+// LocationFullKey = LocationArea;LocationPlace;LocationInfo
+
+// Tutorial
+ciudad inicial prueba;Entrada1=Town of Iria;;Init
+ciudad inicial prueba;Entrada2=Town of Iria;;Center
+ciudad inicial prueba;Check Zone1=Town of Iria;;Exit
+Bosque Inicial Noche;Entrada1=Forsaken Road;;At Town Door
+Bosque Inicial Noche;Zona1=Forsaken Road;;At Mountain Pass
+Montanas;Entrada1=Mountain Pass;;At Forsaken Road
+Montanas;Entrada2=Mountain Pass;;At Old Ruins
+Montanas;Cube=Mountain Pass;;Center
+Exterior Arcane;Entrada1=Old Ruins;;At Mountain Pass
+Exterior Arcane;ZoneCheck0=Old Ruins;;Bridge #1
+Exterior Arcane;ZoneCheck1=Old Ruins;;Bridge #2
+Exterior Arcane;ZoneCheck2=Old Ruins;;Bridge #3
+
+// Nowhere
+PREBOSSFolklore;Entrada1=Nowhere;Jonathan Kappel Core;Folklore
+PREBOSS2;Entrada1=Nowhere;Nascal Core;Mansion of Puppets
+PREBOSSCatedral;Entrada1=Nowhere;Rametek Core;Cathedral of Erynnes
+
+// Arcane Tower
+arcane;INICIO=Arcane;Core;At Center
+arcane;Entrada1=Arcane;Core;At 1st Wing Door
+arcane;Entrada3=Arcane;Core;At 2nd Wing Door
+arcane;Entrada2=Arcane;Core;At 3rd Wing Door
+arcane;Entrada7=Arcane;Core;At 4th Wing Door
+arcane;Entrada8=Arcane;Core;At 5th Wing Door
+arcane;Entrada4=Arcane;Core;At Portal Chamber Door
+arcane;Entrada6=Arcane;Core;At Laberyntos Door
+arcane;EntradaRomeo=Arcane;Core;At Romeo Door
+romeo stage;EntradaRomeo=Boundary of Worlds;;Inside Romeo Room
+arcane torre;Entrada1=Arcane;Laberyntos;Inside Shop Room
+hall arcane especial;Entrada1=Arcane;Portal Chamber;At Core Door
+Hall arcane especial;EntradaMansion=Arcane;Portal Chamber;At Mansion Door
+Hall arcane especial;EntradaFolklore=Arcane;Portal Chamber;At Great Plains Door
+Hall arcane especial;EntradaCatedral=Arcane;Portal Chamber;At Cathedral Door
+
+
+
+// Arcane Wings
+hall arcane;Entrada1=Arcane;1st Wing;At Core Door
+hall arcane;Entrada2=Arcane;1st Wing;To Mansion
+hall arcane 2B;Entrada1=Arcane;2nd Wing;At Core Door
+hall arcane 2B;Check3Zone=Arcane;2nd Wing;Checkpoint
+hall arcane 2B;Entrada2=Arcane;2nd Wing;To Cathedral
+hall arcane 3C;Entrada1=Arcane;3rd Wing;At Core Door
+hall arcane 3C;Entrada2=Arcane;3rd Wing;To Folklore
+hall arcane 3C;Entrada3=Arcane;3rd Wing;At Lost Tomb
+hall arcane EX3;Entrada1=Arcane;Lost Tomb
+
+hall arcane 6;Entrada1       =Arcane;Fourth Wing;At Core Door
+hall arcane 6;CubeCheck       =Arcane;Fourth Wing;At broken path
+hall arcane 6;Check1       =Arcane;Fourth Wing;At bottom floor
+hall arcane 6;Entrada2       =Arcane;Fourth Wing;To Graven
+
+hall arcane 8;Entrada1      =Arcane;Fifth Wing;At Core Door
+hall arcane 8;Entrada2      =Arcane;Fifth Wing;At Shrine Door
+
+
+
+
+
+// Mansion of Puppets
+Mansion 1;Entrada1=Mansion of Puppets;Main Body;At First Wing Door
+mansion 1;Entrada2=Mansion of Puppets;Main Body;At Basement Door
+mansion 1;Entrada3=Mansion of Puppets;Main Body;At Paintings Corridor Door
+Mansion 1;Entrada4=Mansion of Puppets;Main Body;At Nascal Core Door
+mansion 1;Entrada5=Mansion of Puppets;Main Body;At Attic Door
+mansion 1;CHECK PRECOMBATE=Mansion of Puppets;Main Body;Checkpoint
+Mansion 2;Entrada1=Mansion of Puppets;Attic;At Main Body Door
+Mansion 2;Check1=Mansion of Puppets;Attic;Memory Place
+mansion ex;Entrada1=Mansion of Puppets;Paintings Corridor;At Body Door
+mansion EX;Entrada2=Mansion of Puppets;Paintings Corridor;At Workshop Door
+Mansion 3;Entrada1=Mansion of Puppets;Workshop;At Corridor Door
+Mansion 3;Entrada2=Mansion of Puppets;Workshop;At Basement Door
+mansion 3;Entrada3=Mansion of Puppets;Workshop;At Portal Chamber Door
+mansion 4;Entrada1=Mansion of Puppets;Basement;At Workshop Door
+Mansion 4;Entrada2=Mansion of Puppets;Basement;At Main Body Door
+mansion 4;Check1=Mansion of Puppets;Basement;Right
+mansion 4;Check2=Mansion of Puppets;Basement;Bottom
+
+// Folklore
+Folklore;Check1=Folklore;Lia's Road;To Arcane Wing
+Folklore;Check2=Folklore;Lia's Road;To Zodiac Temple
+Folklore2Pradera;Check1=Folklore;Great Plains;To Lia's Road
+Folklore2Pradera;Check2=Folklore;Great Plains;To Mountain Heart
+Folklore2Pradera;Check3=Folklore;Great Plains;To Hidden Meadow
+Folklore2Pradera;Check4=Folklore;Great Plains;To Zodiac Temple
+Folklore2Pradera;Check5=Folklore;Great Plains;To Portal Chamber
+Folklore3TemploV2;Check1=Folklore;Heart of the Mountain;To Great Plains
+Folklore4Ruinas;Entrada1=Folklore;Zodiac Temple;To Lia's Road
+Folklore4Ruinas;Entrada2=Folklore;Zodiac Temple;To Great Plains
+Folklore5SalaFinal;Entrada1=Folklore;Hidden Meadow;To Great Plains
+Folklore5SalaFinal;Entrada2=Folklore;Hidden Meadow;To Messenger Core
+
+// Cathedral
+Catedral3;Entrada1=Cathedral of Erynnes;Outer Wall;To Arcane Wing
+Catedral3;ZonaCheck1=Cathedral of Erynnes;Outer Wall;Checkpint left
+Catedral3;ZonaCheck3=Cathedral of Erynnes;Outer Wall;Checkpint right
+Catedral3;Entrada2=Cathedral of Erynnes;Outer Wall;To Central Chamber
+Catedral;Entrada1=Cathedral of Erynnes;Central Chamber;To Outer Wall
+Catedral;Entrada2=Cathedral of Erynnes;Central Chamber;To Atrium (right)
+Catedral;Entrada3=Cathedral of Erynnes;Central Chamber;To Atrium (left)
+Catedral;Entrada4=Cathedral of Erynnes;Central Chamber;To Inner Chamber
+Catedral;Entrada5=Cathedral of Erynnes;Central Chamber;To Garden
+Catedral;Entrada6=Cathedral of Erynnes;Central Chamber;To Messenger Core
+Catedral;CheckZoneAltar    =Cathedral of Erynnes;Central Chamber;At Stairs
+Catedral5;Entrada1=Cathedral of Erynnes;Garden;To Central Chamber
+Catedral5;CubeCaida=Cathedral of Erynnes;Garden;Checkpoint bottom
+Catedral5;CubeArriba=Cathedral of Erynnes;Garden;Checkpoint top
+Catedral2;Entrada1=Cathedral of Erynnes;Atrium;To Central Chamber (right)
+Catedral2;Entrada2=Cathedral of Erynnes;Atrium;To Central Chamber (left)
+Catedral4;Entrada1=Cathedral of Erynnes;Inner Chamber;To Central Chamber
+Catedral4;Entrada2=Cathedral of Erynnes;Inner Chamber;To Portal Chamber
+Catedral4;Entrada3=Cathedral of Erynnes;Inner Chamber;At end
+
+
+
+
+
+// Graveyard
+graven 2;Entrada1          =Graven;Ancient Graveyard;To Arcane Wing
+graven 2;CubeCheck1          =Graven;Ancient Graveyard;At Elienai
+Graven 2;Entrada2       =Graven;Ancient Graveyard;To City Outskirts
+Graven 1;Entrada1         =Graven;City Outskirts;To Ancient Graveyard
+Graven 1;CUBECheck1        =Graven;City Outskirts;Checkpoint
+
+
+// The shrine of the Seasons
+
+
+dungeon0;Entrada1       =The shrine of the Seasons;Temple Altar;To Arcane Wing
+Dungeon0;Entrada2       =The shrine of the Seasons;Temple Altar;To Autumn
+Dungeon0;Entrada4       =The shrine of the Seasons;Temple Altar;To Winter
+
+Dungeon1;Entrada1       =The shrine of the Seasons;First Trial;To Altar
+Dungeon1;Entrada2       =The shrine of the Seasons;First Trial;To Winter
+
+Dungeon2;Entrada1       =The shrine of the Seasons;Second Trial;To Altar
+
+
+NievePantalla;Entrada1       =The shrine of the Seasons;Winter;Entrance
+NievePantalla;ZoneCheck4B       =The shrine of the Seasons;Winter;Right
+NievePantalla;ZoneCheck4A       =The shrine of the Seasons;Winter;Right before Golem
+NievePantalla;ZoneCheck6       =The shrine of the Seasons;Winter;Right after Golem
+NievePantalla;ZoneCheck7       =The shrine of the Seasons;Winter;Right end
+NievePantalla;ZoneCheck5B      =The shrine of the Seasons;Winter;Left
+NievePantalla;ZoneCheck5A     =The shrine of the Seasons;Winter;Left end
+
+
+
