@@ -1,13 +1,17 @@
 
+// Inventory
 Weapon=Weapon
 Armor=Armor
 useable=Useable
 Key=Key
 
+// Difficulty
+None=None
 Easy=Easy
 Normal=Normal
-Godlike=Godlike
+Locked=Locked
 
+// Skill Tree
 Skill Tree=Skill Tree
 Skill Points=Skill Points
 Used=Used
