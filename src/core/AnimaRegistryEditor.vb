@@ -24,7 +24,7 @@
     Public Shared MaxCoins As Integer = 36538000
     Public Shared MaxPlayTime As Integer = 36538000
 
-    Public Shared DificultiyNames As String() = {"Godlike", "Easy", "Normal"}
+    Public Shared DifficultyNames As String() = {"None", "Easy", "Normal", "Locked"}
     Public Shared ItemTypeNames As New SortedList(Of String, String) From {{"w", "Weapon"}, {"a", "Armor"}, {"k", "Key"}, {"u", "Useable"}}
 
     Public Shared SlotDateFormatPattern As String = "HH:mm  dd '/'MM'/'yyyy"

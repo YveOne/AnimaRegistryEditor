@@ -124,8 +124,8 @@ Partial Class AnimaRegistryEditor
             Public Sub LoadCurrentPlace(obj As Object)
                 Dim val As Byte() = DropLastByte(CType(obj, Byte()))
                 Dim s As String() = BytesToString(val).Split(CChar(";"))
-                _currentPlaceArea = s(0).ToLower()
-                _currentPlacePoint = s(1).ToLower()
+                _currentPlaceArea = s(0)
+                _currentPlacePoint = s(1)
                 _currentPlayTime = CInt(If(s(2) = "", "0", s(2)))
             End Sub
 
@@ -177,10 +177,6 @@ Partial Class AnimaRegistryEditor
                 For Each k As String In Me.LoadDelegates.Keys
                     SaveDelegates(k)(AnimaRegistryEditor.GetKeyAlias(k & slot))
                 Next
-                If (slot <> _Slot) Then
-                    _Slot = slot
-                    LoadSlot(_Slot)
-                End If
                 _valuesChanged = False
             End Sub
 
@@ -293,7 +289,7 @@ Partial Class AnimaRegistryEditor
                 Set(value As String)
                     Dim s() As String = value.Split(CChar(";"))
                     If (s.Length = 2) Then
-                        s(0) = s(0).ToLower()
+                        s(0) = s(0)
                         value = Join(s, ";")
                         If (Locations.ContainsPlace(value)) Then
                             _currentPlaceArea = s(0)
@@ -663,6 +659,7 @@ Partial Class AnimaRegistryEditor
         End Function
 
         Public Shared Sub LoadSlot(Slot As Integer)
+            'MessageBox.Show(CStr(Slot))
             Dim gs As New Gamesave(Slot, RegHandler)
             If (gs.LoadFromRegistry()) Then
                 Items(Slot - 1) = gs
@@ -688,9 +685,12 @@ Partial Class AnimaRegistryEditor
             Dim GS As Gamesave = Items(slot - 1)
             If GS IsNot Nothing Then
                 Dim charLoc As Locations.LocationPlace = Locations.GetPlace(GS.CurrentPlace)
-                Dim charPlace As String = Join({charLoc.Title, charLoc.Subtitle}, " ").Trim()
-                If charPlace.Length > SavegameMaxLength Then
-                    charPlace = charLoc.Subtitle
+                Dim charPlace As String = "???"
+                If charLoc IsNot Nothing Then
+                    charPlace = Join({charLoc.Title, charLoc.Subtitle}, " ").Trim()
+                    If charPlace.Length > SavegameMaxLength Then
+                        charPlace = charLoc.Subtitle
+                    End If
                 End If
                 Return String.Format(SlotTextFormatPattern, slot, GS.Level, charPlace, GS.DateString) & If(GS.ValuesChanged, GamesaveChangedIndicator, "")
             Else

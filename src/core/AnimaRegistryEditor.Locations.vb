@@ -12,8 +12,8 @@
             Public Subtitle As String
             Public Info As String
             Public Sub New(AreaKey As String, PointKey As String, Title As String, Subtitle As String, Info As String)
-                Me.AreaKey = AreaKey.ToLower()
-                Me.PointKey = PointKey.ToLower()
+                Me.AreaKey = AreaKey
+                Me.PointKey = PointKey
                 Me.Title = Title
                 Me.Subtitle = Subtitle
                 Me.Info = Info
@@ -39,11 +39,13 @@
             Dim leftSplit As String()
             leftSplit = fullKey.Split(CChar(";"))
             If (leftSplit.Length = 2) Then
-                Dim areaKey As String = leftSplit(0)
-                Dim pointKey As String = leftSplit(1)
-                Dim p As New LocationPlace(areaKey, pointKey, title, subtitle, info)
-                Places.Add(p)
-                PlacesByFullKey.Add(fullKey, p)
+                If (Not PlacesByFullKey.ContainsKey(fullKey)) Then
+                    Dim p As New LocationPlace(leftSplit(0), leftSplit(1), title, subtitle, info)
+                    Places.Add(p)
+                    PlacesByFullKey.Add(fullKey, p)
+                Else
+                    MessageBox.Show("Location " & fullKey & " already exists")
+                End If
             End If
         End Sub
 
