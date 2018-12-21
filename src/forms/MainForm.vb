@@ -149,9 +149,6 @@ Public Class MainForm
 
     Private Sub UpdateSlotText(slot As Integer)
         Dim SlotText = AnimaRegistryEditor.Gamesaves.GetSlotText(slot)
-        'If (SlotText.Length > 30) Then
-        'SlotText = SlotText.Substring(0, 30) & "..."
-        'End If
         GetGamesaveButton(slot).Text = SlotText
         GetSaveAsButton(slot).Text = SlotText
         If (AnimaRegistryEditor.Gamesaves.IsSlotSelected(slot)) Then
@@ -253,7 +250,7 @@ Public Class MainForm
         PlayTimeNumeric.Maximum = AnimaRegistryEditor.MaxPlayTime
 
         DificultyComboBox.Items.Clear()
-        For Each s As String In AnimaRegistryEditor.DificultiyNames
+        For Each s As String In AnimaRegistryEditor.DifficultyNames
             DificultyComboBox.Items.Add(AnimaRegistryEditor.GetString(s))
         Next
 
